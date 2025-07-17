@@ -1,6 +1,5 @@
-langchain
 streamlit
-chromadb
+pdfplumber
 sentence-transformers
-unstructured
-pdfminer.six
+chromadb
+langchain
