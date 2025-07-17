@@ -1,11 +1,11 @@
-from langchain.document_loaders import PyPDFLoader
+from langchain.document_loaders import PyMuPDFLoader
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 from langchain.llms import HuggingFaceHub
 
 def run_rag(pdf_path, query):
-    loader = PyPDFLoader(pdf_path)
+    loader = PyMuPDFLoader(pdf_path)
     docs = loader.load()
 
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
