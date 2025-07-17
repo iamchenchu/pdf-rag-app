@@ -1,6 +1,6 @@
 langchain
-sentence-transformers
-chromadb
-pypdf
 streamlit
-PyMuPDF
+chromadb
+sentence-transformers
+unstructured
+pdfminer.six
