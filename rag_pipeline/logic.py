@@ -1,5 +1,5 @@
 import pdfplumber
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
@@ -13,7 +13,7 @@ def run_rag(pdf_path, query):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     docs = text_splitter.create_documents([full_text])
 
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
     vectorstore = Chroma.from_documents(docs, embeddings)
     retriever = vectorstore.as_retriever()
 

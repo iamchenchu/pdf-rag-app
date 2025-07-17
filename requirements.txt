@@ -1,5 +1,6 @@
 streamlit
 pdfplumber
-sentence-transformers
-chromadb
 langchain
+chromadb
+sentence-transformers
+transformers
